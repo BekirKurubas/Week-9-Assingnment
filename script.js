@@ -28,6 +28,8 @@ function capitalizeWords(str) {
   const capitalizedStr = capitalizeWords(str);
   console.log(capitalizedStr); 
 
+console.log("---------------------------------------------------------");
+
 // Quetsion 2)
 
 function convertToInitials(namesArr) {
@@ -49,4 +51,34 @@ function convertToInitials(namesArr) {
   const namesArr = ["roronoa zoro", "vinsmoke sanji", "tony tony chopper", "gold roger"];
   const initials = convertToInitials(namesArr);
   console.log(initials);
+
+  console.log("--------------------------------------------------------");
+
+
+// Question 3)
+
+function isWeekend(date) {    
+    const dayOfWeek = date.getDay();
+    
+    // Check if the day is Sunday (0) or Saturday (6)
+    return dayOfWeek === 0 || dayOfWeek === 6;
+  }
   
+  // Create a Date object for today
+  const today = new Date();
+  
+  // Use the isWeekend function to check if today is a weekend
+  const isTodayWeekend = isWeekend(today);
+  
+  // Display the result based on whether today is a weekend or not
+  if (isTodayWeekend) {
+    console.log('Today is the weekend.');
+  } else {
+    console.log('Today is not the weekend.');
+  }
+  
+
+  console.log("--------------------------------------------");
+
+  
+
