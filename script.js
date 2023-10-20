@@ -65,10 +65,10 @@ function isWeekend(date) {
   }
   
   // Create a Date object for today
-  const today = new Date();
+  const today1 = new Date();
   
   // Use the isWeekend function to check if today is a weekend
-  const isTodayWeekend = isWeekend(today);
+  const isTodayWeekend = isWeekend(today1);
   
   // Display the result based on whether today is a weekend or not
   if (isTodayWeekend) {
@@ -80,5 +80,28 @@ function isWeekend(date) {
 
   console.log("--------------------------------------------");
 
+
+  // Question 4)
+
+  function getDayName(date) {
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    return daysOfWeek[date.getDay()];
+  }
   
+  // Function to get the name of the month
+  function getMonthName(date) {
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    return months[date.getMonth()];
+  }
+  
+  // Create a Date object for today
+  const today = new Date();
+  
+  // Get the day and month names using the functions
+  const day = getDayName(today);
+  const month = getMonthName(today);
+  
+  // Display the day and month
+  console.log(`Day is: ${day} - Month is: ${month}`);
+
 
