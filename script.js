@@ -104,4 +104,19 @@ function isWeekend(date) {
   // Display the day and month
   console.log(`Day is: ${day} - Month is: ${month}`);
 
+console.log("------------------------------------------------------------");
 
+function isSwissLicensePlate(plate) {
+    const plateNumberPattern = /^[A-Z]{2} \d{3} \d{3}$/;
+    return plateNumberPattern.test(plate);
+  }
+  
+  // Example usage:
+  const plate1 = "AG 124 234";
+  const plate2 = "ZH 783 499";
+  const plate3 = "AB 12 345"; // Invalid format
+  
+  console.log(isSwissLicensePlate(plate1)); // true
+  console.log(isSwissLicensePlate(plate2)); // true
+  console.log(isSwissLicensePlate(plate3)); // false
+  
