@@ -28,3 +28,25 @@ function capitalizeWords(str) {
   const capitalizedStr = capitalizeWords(str);
   console.log(capitalizedStr); 
 
+// Quetsion 2)
+
+function convertToInitials(namesArr) {
+    const initialsArr = [];
+  
+    for (const fullName of namesArr) {
+      // Split the full name into first name and last name
+      const [firstName, lastName] = fullName.split(' ');
+  
+      // Get the initials of the first and last names and concatenate them
+      const initials = firstName[0].toUpperCase() + lastName[0].toUpperCase();
+  
+      initialsArr.push(initials);
+    }
+  
+    return initialsArr;
+  }
+  
+  const namesArr = ["roronoa zoro", "vinsmoke sanji", "tony tony chopper", "gold roger"];
+  const initials = convertToInitials(namesArr);
+  console.log(initials);
+  
